@@ -9,15 +9,17 @@ public class Main extends JavaPlugin{
 	
 	
 	public void onEnable() {
-		Bukkit.getConsoleSender().sendMessage("§a***************");
-		Bukkit.getConsoleSender().sendMessage("§6* Plugin by   *");
-		Bukkit.getConsoleSender().sendMessage("§6* Jugendhackt *");
-		Bukkit.getConsoleSender().sendMessage("§a***************");
-		this.getCommand("test").setExecutor(new ban());
+		Bukkit.getConsoleSender().sendMessage("§b####################");
+		Bukkit.getConsoleSender().sendMessage("§b#     Plugin       #");
+		Bukkit.getConsoleSender().sendMessage("§b#      by          #");
+		Bukkit.getConsoleSender().sendMessage("§b#    Jugend        #");
+		Bukkit.getConsoleSender().sendMessage("§b#     Hackt        #");
+		Bukkit.getConsoleSender().sendMessage("§b#    Schwerin      #");
+		Bukkit.getConsoleSender().sendMessage("§b####################");
 		
 		
 		
-		
+		Bukkit.getPluginManager().registerEvents(new ban(), this);
 		
 		
 		

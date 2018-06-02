@@ -1,20 +1,19 @@
-package de.speakcraft.commands;
+package de.speakcraft.classes;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerChatEvent;
 
-public class ban implements CommandExecutor{
+public class TSBan implements Listener {
 
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		Player p = (Player)sender ;
-		if(p.isOp()) {
-			if(cmd.getName().equalsIgnoreCase("test")) {
-			p.sendMessage("dszuhzifizdioiu");
-			}
-		}
+	public void onChat(PlayerChatEvent e) {
+		Player p = e.getPlayer();
+// Gibt den Spieler an, der benutzt werden soll!
+	if(e.getMessage().equalsIgnoreCase("!ban")) {
+// Abfrage des Befehls
+		e.setCancelled(true);
+		
+		p.sendMessage(Main.Prefix + "§cBitte gebe eine Ip-Adresse an (!ban [IP-Adresse]");
 		
 		
 		
@@ -30,14 +29,40 @@ public class ban implements CommandExecutor{
 		
 		
 		
+	}
+	
+	public void getIp(String[] args) {
+	if(args.length == 0) {
+		
+	
+		if(e.getMessage().equalsIgnoreCase("!check")) {
+			p.sendMessage("§cBitte nutze !check [InGameName]");
+		
+		}	
+	}else if(args.length == 1) {
+		Player t = e.getPlayer(args[0]);
+		
+		p.sendMessage(t.getName());
+		p.sendMessage(t.getAddress());
 		
 		
+	}
+	}
 		
 		
-		
-		
-		
-		return false;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 
 }
