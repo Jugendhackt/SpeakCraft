@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import de.speakcraft.commands.ban;
 
 public class Main extends JavaPlugin{
-	
+	public static String Prefix = ""
 	
 	public void onEnable() {
 		Bukkit.getConsoleSender().sendMessage("§b####################");

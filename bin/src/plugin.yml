@@ -1,0 +1,6 @@
+name: SpeakCraft
+version: 1.0
+author: Jugendhackt
+main: de.speakcraft.classes.Main
+commands:
+  test:
